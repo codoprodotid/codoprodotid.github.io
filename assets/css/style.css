@@ -1,11 +1,3 @@
-/**
-* Template Name: eStartup
-* Template URL: https://bootstrapmade.com/estartup-bootstrap-landing-page-template/
-* Updated: Mar 17 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -224,7 +216,7 @@ span {
 .navbar a:hover,
 .navbar .active,
 .navbar .active:focus,
-.navbar li:hover>a {
+.navbar li:hover > a {
   color: #71c55d;
 }
 
@@ -259,11 +251,11 @@ span {
 
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
-.navbar .dropdown ul li:hover>a {
+.navbar .dropdown ul li:hover > a {
   color: #71c55d;
 }
 
-.navbar .dropdown:hover>ul {
+.navbar .dropdown:hover > ul {
   opacity: 1;
   top: 100%;
   visibility: visible;
@@ -275,7 +267,7 @@ span {
   visibility: hidden;
 }
 
-.navbar .dropdown .dropdown:hover>ul {
+.navbar .dropdown .dropdown:hover > ul {
   opacity: 1;
   top: 0;
   left: 100%;
@@ -287,7 +279,7 @@ span {
     left: -90%;
   }
 
-  .navbar .dropdown .dropdown:hover>ul {
+  .navbar .dropdown .dropdown:hover > ul {
     left: -100%;
   }
 }
@@ -359,7 +351,7 @@ span {
 
 .navbar-mobile a:hover,
 .navbar-mobile .active,
-.navbar-mobile li:hover>a {
+.navbar-mobile li:hover > a {
   color: #71c55d;
 }
 
@@ -394,11 +386,11 @@ span {
 
 .navbar-mobile .dropdown ul a:hover,
 .navbar-mobile .dropdown ul .active:hover,
-.navbar-mobile .dropdown ul li:hover>a {
+.navbar-mobile .dropdown ul li:hover > a {
   color: #71c55d;
 }
 
-.navbar-mobile .dropdown>.dropdown-active {
+.navbar-mobile .dropdown > .dropdown-active {
   display: block;
 }
 
@@ -616,11 +608,11 @@ section {
   font-size: 14px;
 }
 
-.breadcrumbs ol li+li {
+.breadcrumbs ol li + li {
   padding-left: 10px;
 }
 
-.breadcrumbs ol li+li::before {
+.breadcrumbs ol li + li::before {
   display: inline-block;
   padding-right: 10px;
   color: #6c757d;
@@ -928,7 +920,7 @@ section {
   color: #71c55d;
 }
 
-#team .team-block .team-content ul>span {
+#team .team-block .team-content ul > span {
   display: inline-block;
   font-size: 14px;
   font-weight: 300;
@@ -960,7 +952,7 @@ section {
   top: -29px;
 }
 
-#testimonials .top-top>h2 {
+#testimonials .top-top > h2 {
   font-family: "Roboto" sans-serif;
   font-size: 45px;
   font-weight: 100;
@@ -969,7 +961,7 @@ section {
   text-transform: capitalize;
 }
 
-#testimonials .top-top>h4 {
+#testimonials .top-top > h4 {
   font: 700 12px Lato, sans-serif;
 }
 
@@ -1122,7 +1114,7 @@ section {
   color: #71c55d;
 }
 
-#blog .block-blog .content-blog>span {
+#blog .block-blog .content-blog > span {
   float: left;
   font-size: 12px;
 }
@@ -1144,12 +1136,16 @@ section {
 /* Newsletter Section
 --------------------------------*/
 #newsletter {
-  background: rgba(0, 0, 0, 0) url(../img/newsletter-bg.jpg) no-repeat center top fixed;
+  background: rgba(0, 0, 0, 0) url(../img/newsletter-bg.jpg) no-repeat center
+    top fixed;
   background-size: cover;
 }
 
 #newsletter .overlay {
-  background: linear-gradient(rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.2) 95%);
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(255, 255, 255, 0.2) 95%
+  );
   height: 100%;
   width: 100%;
 }
@@ -1307,7 +1303,7 @@ section {
   font-weight: 600;
 }
 
-#contact .php-email-form .error-message br+br {
+#contact .php-email-form .error-message br + br {
   margin-top: 25px;
 }
 
@@ -1359,7 +1355,7 @@ section {
   padding: 12px 15px;
 }
 
-#contact .php-email-form button[type=submit] {
+#contact .php-email-form button[type="submit"] {
   background: #71c55d;
   border: 0;
   padding: 10px 24px;
@@ -1367,7 +1363,7 @@ section {
   transition: 0.4s;
 }
 
-#contact .php-email-form button[type=submit]:hover {
+#contact .php-email-form button[type="submit"]:hover {
   background: #92d283;
 }
 
@@ -1408,7 +1404,7 @@ section {
   letter-spacing: 1px;
 }
 
-.footer .list-menu>h4 {
+.footer .list-menu > h4 {
   color: #fff;
   padding-bottom: 20px;
 }
