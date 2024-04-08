@@ -1,0 +1,29 @@
+{
+  "author": "Miftahul Ulum, S.Pd.",
+  "email": "ulumiftahul06@gmail.com",
+  "year": "2024",
+  "instagram": "@miftahululum002",
+  "data": [
+    {
+      "name": "Pembuatan Custom Aplikasi",
+      "shortname": "Sipetarung",
+      "description": "Menerima pembuatan custom aplikasi yang disesuaikan dengan kebutuhan Anda",
+      "image": "assets/img/svg/cloud.svg",
+      "link": "#"
+    },
+    {
+      "name": "Konsultasi IT",
+      "shortname": "Sipetarung",
+      "description": "Menerima konsultasi IT, dan training IT center",
+      "image": "assets/img/svg/planet.svg",
+      "link": "#"
+    },
+    {
+      "name": "Tutorial programming dan lain-lain",
+      "shortname": "Sipetarung",
+      "description": "Menerima konsultasi IT, dan training",
+      "image": "assets/img/svg/asteroid.svg",
+      "link": "#"
+    }
+  ]
+}
