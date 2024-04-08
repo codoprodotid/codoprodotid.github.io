@@ -57,16 +57,27 @@ $(function () {
   getServices();
 });
 
-function getServices() {
-  const fecthOptions = getFetchOptions();
-  const url = "assets/json/services.json";
-  fetch(url, fecthOptions)
-    .then((response) => response.json())
-    .then((data) => {
-      let dataParsing = data.data;
-      dataParsing.forEach((element, index) => {
-        let row = getContainerServices(element, index);
-        $("#container-services").append(row);
+function getResponse(url) {
+  let fecthOptions = getFetchOptions();
+  return fetch(url, fecthOptions).then((response) => {
+    return response
+      .json()
+      .then((data) => {
+        return data;
+      })
+      .catch((err) => {
+        console.log(err);
       });
+  });
+}
+
+function getServices() {
+  const url = "assets/json/services.json";
+  let res = getResponse(url).then((data) => {
+    let dataParsing = data.data;
+    dataParsing.forEach((element, index) => {
+      let row = getContainerServices(element, index);
+      $("#container-services").append(row);
     });
+  });
 }
