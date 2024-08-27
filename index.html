@@ -7,6 +7,17 @@
     <link rel="icon" href="dist/img/codoproid.png" />
     <title>Codo Pro ID</title>
     <meta content="Codo Pro ID" name="author">
+    <script>
+        if (
+            localStorage.theme === "dark" ||
+            (!("theme" in localStorage) &&
+                window.matchMedia("(prefers-color-scheme: dark)").matches)
+        ) {
+            document.documentElement.classList.add("dark");
+        } else {
+            document.documentElement.classList.remove("dark");
+        }
+    </script>
 </head>
 <body>
     <!-- Header -->
@@ -16,7 +27,6 @@
                 <div class="px-4">
                     <a href="#home" class="font-bold text-xl text-dark dark:text-primary block py-6">
                         <img src="dist/img/codoproid.png" class="w-14" />
-                        <!-- Codo Pro ID -->
                     </a>
                 </div>
                 <div class="flex items-center px-4">
@@ -86,7 +96,7 @@
                         Kami</a>
                 </div>
                 <div class="w-full self-end px-4 lg:w-1/2">
-                    <div class="relative mt-4 lg:right-0 lg:mt-2 lg:mb-5">
+                    <div class="relative mt-4 lg:right-0 lg:mt-2 lg:mb-32">
                         <img src="dist/img/codoproid.png" alt="Codo Pro ID" class="relative z-10 mx-auto w-full" />
                     </div>
                 </div>
@@ -102,7 +112,7 @@
                         Tentang Kami
                     </h4>
                     <h2 class="font-bold text-3xl text-dark mb-5 max-w-md lg:text-4xl dark:text-white">
-                        Yuk, belajar web programming bersama CodoProID
+                        Yuk, belajar web programming bersama Codo Pro ID
                     </h2>
                     <p class="font-medium text-base text-secondary max-w-xl lg:text-lg">
                         Lorem ipsum dolor sit amet consectetur adipisicing
@@ -178,10 +188,10 @@
                     <div class="rounded-md shadow-md overflow-hidden">
                         <img src="dist/img/portfolio/1.png" alt="Project Satu" width="w-full" />
                     </div>
-                    <h3 class="font-semibold text-xl text-dark mt-5 dark:text-white">
+                    <h3 class="font-semibold text-xl text-white mt-5 dark:text-primary">
                         Project Satu
                     </h3>
-                    <p class="font-medium text-base text-secondary">
+                    <p class="font-medium text-base text-dark dark:text-primary">
                         Lorem ipsum dolor sit amet consectetur adipisicing
                         elit. Consequuntur illum nobis magnam quaerat minima
                         voluptatibus facilis labore cumque ipsum veritatis.
@@ -191,205 +201,10 @@
                     <div class="rounded-md shadow-md overflow-hidden">
                         <img src="dist/img/portfolio/2.png" alt="Project Dua" width="w-full" />
                     </div>
-                    <h3 class="font-semibold text-xl text-dark mt-5 dark:text-white">
+                    <h3 class="font-semibold text-xl text-white mt-5 dark:text-primary">
                         Project Dua
                     </h3>
-                    <p class="font-medium text-base text-secondary">
-                        Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. Consequuntur illum nobis magnam quaerat minima
-                        voluptatibus facilis labore cumque ipsum veritatis.
-                    </p>
-                </div>
-                <div class="mb-12 p-4 md:w-1/2">
-                    <div class="rounded-md shadow-md overflow-hidden">
-                        <img src="dist/img/portfolio/3.png" alt="Project Tiga" width="w-full" />
-                    </div>
-                    <h3 class="font-semibold text-xl text-dark mt-5 dark:text-white">
-                        Project Tiga
-                    </h3>
-                    <p class="font-medium text-base text-secondary">
-                        Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. Consequuntur illum nobis magnam quaerat minima
-                        voluptatibus facilis labore cumque ipsum veritatis.
-                    </p>
-                </div>
-                <div class="mb-12 p-4 md:w-1/2">
-                    <div class="rounded-md shadow-md overflow-hidden">
-                        <img src="dist/img/portfolio/4.png" alt="Project Empat" width="w-full" />
-                    </div>
-                    <h3 class="font-semibold text-xl text-dark mt-5 dark:text-white">
-                        Project Empat
-                    </h3>
-                    <p class="font-medium text-base text-secondary">
-                        Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. Consequuntur illum nobis magnam quaerat minima
-                        voluptatibus facilis labore cumque ipsum veritatis.
-                    </p>
-                </div>
-                <div class="mb-12 p-4 md:w-1/2">
-                    <div class="rounded-md shadow-md overflow-hidden">
-                        <img src="dist/img/portfolio/5.png" alt="Project Lima" width="w-full" />
-                    </div>
-                    <h3 class="font-semibold text-xl text-dark mt-5 dark:text-white">
-                        Project Lima
-                    </h3>
-                    <p class="font-medium text-base text-secondary">
-                        Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. Consequuntur illum nobis magnam quaerat minima
-                        voluptatibus facilis labore cumque ipsum veritatis.
-                    </p>
-                </div>
-                <div class="mb-12 p-4 md:w-1/2">
-                    <div class="rounded-md shadow-md overflow-hidden">
-                        <img src="dist/img/portfolio/6.png" alt="Project Enam" width="w-full" />
-                    </div>
-                    <h3 class="font-semibold text-xl text-dark mt-5 dark:text-white">
-                        Project Enam
-                    </h3>
-                    <p class="font-medium text-base text-secondary">
-                        Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. Consequuntur illum nobis magnam quaerat minima
-                        voluptatibus facilis labore cumque ipsum veritatis.
-                    </p>
-                </div>
-                <div class="mb-12 p-4 md:w-1/2">
-                    <div class="rounded-md shadow-md overflow-hidden">
-                        <img src="dist/img/portfolio/7.png" alt="Project Tujuh" width="w-full" />
-                    </div>
-                    <h3 class="font-semibold text-xl text-dark mt-5 dark:text-white">
-                        Project Tujuh
-                    </h3>
-                    <p class="font-medium text-base text-secondary">
-                        Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. Consequuntur illum nobis magnam quaerat minima
-                        voluptatibus facilis labore cumque ipsum veritatis.
-                    </p>
-                </div>
-                <div class="mb-12 p-4 md:w-1/2">
-                    <div class="rounded-md shadow-md overflow-hidden">
-                        <img src="dist/img/portfolio/8.png" alt="Project Delapan" width="w-full" />
-                    </div>
-                    <h3 class="font-semibold text-xl text-dark mt-5 dark:text-white">
-                        Project Delapan
-                    </h3>
-                    <p class="font-medium text-base text-secondary">
-                        Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. Consequuntur illum nobis magnam quaerat minima
-                        voluptatibus facilis labore cumque ipsum veritatis.
-                    </p>
-                </div>
-                <div class="mb-12 p-4 md:w-1/2">
-                    <div class="rounded-md shadow-md overflow-hidden">
-                        <img src="dist/img/portfolio/9.png" alt="Project Sembilan" width="w-full" />
-                    </div>
-                    <h3 class="font-semibold text-xl text-dark mt-5 dark:text-white">
-                        Project Sembilan
-                    </h3>
-                    <p class="font-medium text-base text-secondary">
-                        Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. Consequuntur illum nobis magnam quaerat minima
-                        voluptatibus facilis labore cumque ipsum veritatis.
-                    </p>
-                </div>
-                <div class="mb-12 p-4 md:w-1/2">
-                    <div class="rounded-md shadow-md overflow-hidden">
-                        <img src="dist/img/portfolio/10.png" alt="Project Sepuluh" width="w-full" />
-                    </div>
-                    <h3 class="font-semibold text-xl text-dark mt-5 dark:text-white">
-                        Project Sepuluh
-                    </h3>
-                    <p class="font-medium text-base text-secondary">
-                        Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. Consequuntur illum nobis magnam quaerat minima
-                        voluptatibus facilis labore cumque ipsum veritatis.
-                    </p>
-                </div>
-                <div class="mb-12 p-4 md:w-1/2">
-                    <div class="rounded-md shadow-md overflow-hidden">
-                        <img src="dist/img/portfolio/11.png" alt="Project Sebelas" width="w-full" />
-                    </div>
-                    <h3 class="font-semibold text-xl text-dark mt-5 dark:text-white">
-                        Project Sebelas
-                    </h3>
-                    <p class="font-medium text-base text-secondary">
-                        Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. Consequuntur illum nobis magnam quaerat minima
-                        voluptatibus facilis labore cumque ipsum veritatis.
-                    </p>
-                </div>
-                <div class="mb-12 p-4 md:w-1/2">
-                    <div class="rounded-md shadow-md overflow-hidden">
-                        <img src="dist/img/portfolio/12.png" alt="Project Dua Belas" width="w-full" />
-                    </div>
-                    <h3 class="font-semibold text-xl text-dark mt-5 dark:text-white">
-                        Project Dua Belas
-                    </h3>
-                    <p class="font-medium text-base text-secondary">
-                        Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. Consequuntur illum nobis magnam quaerat minima
-                        voluptatibus facilis labore cumque ipsum veritatis.
-                    </p>
-                </div>
-                <div class="mb-12 p-4 md:w-1/2">
-                    <div class="rounded-md shadow-md overflow-hidden">
-                        <img src="dist/img/portfolio/13.png" alt="Project Tiga Belas" width="w-full" />
-                    </div>
-                    <h3 class="font-semibold text-xl text-dark mt-5 dark:text-white">
-                        Project Tiga Belas
-                    </h3>
-                    <p class="font-medium text-base text-secondary">
-                        Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. Consequuntur illum nobis magnam quaerat minima
-                        voluptatibus facilis labore cumque ipsum veritatis.
-                    </p>
-                </div>
-                <div class="mb-12 p-4 md:w-1/2">
-                    <div class="rounded-md shadow-md overflow-hidden">
-                        <img src="dist/img/portfolio/14.png" alt="Project Empat Belas" width="w-full" />
-                    </div>
-                    <h3 class="font-semibold text-xl text-dark mt-5 dark:text-white">
-                        Project Empat Belas
-                    </h3>
-                    <p class="font-medium text-base text-secondary">
-                        Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. Consequuntur illum nobis magnam quaerat minima
-                        voluptatibus facilis labore cumque ipsum veritatis.
-                    </p>
-                </div>
-                <div class="mb-12 p-4 md:w-1/2">
-                    <div class="rounded-md shadow-md overflow-hidden">
-                        <img src="dist/img/portfolio/15.png" alt="Project Lima Belas" width="w-full" />
-                    </div>
-                    <h3 class="font-semibold text-xl text-dark mt-5 dark:text-white">
-                        Project Lima Belas
-                    </h3>
-                    <p class="font-medium text-base text-secondary">
-                        Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. Consequuntur illum nobis magnam quaerat minima
-                        voluptatibus facilis labore cumque ipsum veritatis.
-                    </p>
-                </div>
-                <div class="mb-12 p-4 md:w-1/2">
-                    <div class="rounded-md shadow-md overflow-hidden">
-                        <img src="dist/img/portfolio/16.png" alt="Project Enam Belas" width="w-full" />
-                    </div>
-                    <h3 class="font-semibold text-xl text-dark mt-5 dark:text-white">
-                        Project Enam Belas
-                    </h3>
-                    <p class="font-medium text-base text-secondary">
-                        Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. Consequuntur illum nobis magnam quaerat minima
-                        voluptatibus facilis labore cumque ipsum veritatis.
-                    </p>
-                </div>
-                <div class="mb-12 p-4 md:w-1/2">
-                    <div class="rounded-md shadow-md overflow-hidden">
-                        <img src="dist/img/portfolio/untitled.png" alt="Project Tujuh Belas" width="w-full" />
-                    </div>
-                    <h3 class="font-semibold text-xl text-dark mt-5 dark:text-white">
-                        Project Tujuh Belas
-                    </h3>
-                    <p class="font-medium text-base text-secondary">
+                    <p class="font-medium text-base text-dark dark:text-primary">
                         Lorem ipsum dolor sit amet consectetur adipisicing
                         elit. Consequuntur illum nobis magnam quaerat minima
                         voluptatibus facilis labore cumque ipsum veritatis.
@@ -407,7 +222,7 @@
                         Codo Pro ID
                     </h2>
                     <h3 class="font-bold text-2xl mb-2">Hubungi Kami</h3>
-                    <p>codopro.id@gmail.com</p>
+                    <a href="mailto:codopro.id@gmail.com" class="hover:text-white">codopro.id@gmail.com</a>
                     <p>Jl. Panglima Sudirman Desa Codo Kec. Wajak</p>
                     <p>Malang</p>
                 </div>
@@ -463,8 +278,8 @@
                 </div>
                 <p class="font-medium text-xs text-slate-500 text-center">
                     Dibuat dengan <span class="text-pink-500">❤️</span> oleh
-                    <a href="#" target="_blank" class="text-bold text-primary">Miftahul Ulum</a>, menggunakan
-                    <a href="https://tailwindcss.com" target="_blank" class="font-bold text-sky-500">tailwind CSS</a>
+                    <a href="#" target="_blank" class="text-bold text-primary">Codo Pro ID</a>, menggunakan
+                    <a href="https://tailwindcss.com" target="_blank" class="font-bold text-primary">Tailwind CSS</a>
                 </p>
             </div>
         </div>
