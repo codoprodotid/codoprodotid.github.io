@@ -9,7 +9,7 @@
     "build": "npx tailwindcss -i ./src/input.css -o ./dist/css/output.css --minify"
   },
   "keywords": [],
-  "author": "",
+  "author": "Codo Pro ID",
   "license": "ISC",
   "devDependencies": {
     "tailwindcss": "^3.4.10"
