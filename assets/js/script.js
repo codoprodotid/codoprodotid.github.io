@@ -13,7 +13,7 @@ const teams = [
         github: "https://miftahululum002.github.io",
         instagram: "https://www.instagram.com/miftahululum002/",
         linkedin: "https://www.linkedin.com/in/miftahululum002/",
-        image: "./assets/img/team/miftahul-ulum.jpg",
+        image: "./assets/img/teams/miftahul-ulum.jpg",
     },
 ];
 const testimonials = [
