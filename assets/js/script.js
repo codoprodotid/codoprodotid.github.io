@@ -1,19 +1,62 @@
+const phone = "085117248442";
+const wa_me = "https:/wa.me/+6285117248442";
 const config = {
     app_name: "Codo Pro ID",
-    phone: "085117248442",
-    wa_me: "https:/wa.me/+6285117248442",
+    phone: phone,
+    wa_me: wa_me,
+    wa_me_with_template:
+        wa_me +
+        "?text=Halo%20Codo%20Pro%20ID%0Asaya%20ingin%20konsultasi%20tentang%20aplikasi%20",
     address: "Vila Bukit Tidar Blok A4 No 81 Merjosari Malang",
     email: "codopro.id@gmail.com",
     work_hour: "Senin - Jumat : 08.00 - 16.00 WIB",
 };
-const teams = [
+const heroes = [
     {
-        name: "Miftahul Ulum, S.Pd., Gr.",
+        title: "Transformasi Bisnis Anda dengan Teknologi",
+        subtitle:
+            "Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.",
+        image: "./assets/img/carousel-1.jpg",
+    },
+    {
+        title: "Solusi Efisien, Untuk Berbagai Sektor Bisnis",
+        subtitle:
+            "Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.",
+        image: "./assets/img/carousel-1.jpg",
+    },
+];
+const teams = [
+    // {
+    //     name: "Miftahul Ulum, S.Pd., Gr.",
+    //     position: "Full Stack Developer",
+    //     github: "https://miftahululum002.github.io",
+    //     instagram: "https://www.instagram.com/miftahululum002/",
+    //     linkedin: "https://www.linkedin.com/in/miftahululum002/",
+    //     image: "./assets/img/teams/miftahul-ulum.jpg",
+    // },
+    {
+        name: "Team 1",
         position: "Full Stack Developer",
-        github: "https://miftahululum002.github.io",
-        instagram: "https://www.instagram.com/miftahululum002/",
-        linkedin: "https://www.linkedin.com/in/miftahululum002/",
-        image: "./assets/img/teams/miftahul-ulum.jpg",
+        github: "#",
+        instagram: "#",
+        linkedin: "#",
+        image: "./assets/img/logo.png",
+    },
+    {
+        name: "Team 2",
+        position: "Front End Developer",
+        github: "#",
+        instagram: "#",
+        linkedin: "#",
+        image: "./assets/img/logo.png",
+    },
+    {
+        name: "Team 3",
+        position: "Designer",
+        github: "#",
+        instagram: "#",
+        linkedin: "#",
+        image: "./assets/img/logo.png",
     },
 ];
 const testimonials = [
@@ -55,9 +98,11 @@ $(document).ready(function () {
     setTextElement(".email", config.email);
     setTextElement(".phone", config.phone);
     setTextElement(".work-hour", config.work_hour);
+    setHeroes();
     setTeams();
     setTestimonials();
     setSevices();
+    $("#btn-order-now").attr("href", config.wa_me_with_template);
 });
 
 function setTextElement(selector, text) {
@@ -142,5 +187,32 @@ function setServiceItem(item, index) {
             </div>
         </div>
     </div>`;
+    return html;
+}
+
+function setHeroes() {
+    let result = "";
+    heroes.forEach((item, index) => {
+        result += setHeroItem(item);
+    });
+    $("#container-hero").html(result);
+}
+
+function setHeroItem(item, index) {
+    let html = `<div class="owl-carousel-item position-relative" data-dot="<img src='./assets/img/carousel-1.jpg'>">
+        <img class="img-fluid" src="./assets/img/carousel-1.jpg" alt="">
+        <div class="owl-carousel-inner">
+            <div class="container">
+                <div class="row justify-content-start">
+                    <div class="col-10 col-lg-8">
+                        <h1 class="display-2 text-white animated slideInDown">${item.title}</h1>
+                        <p class="fs-5 fw-medium text-white mb-4 pb-3">${item.subtitle}</p>
+                                <a href="" class="btn btn-primary d-none rounded-pill py-3 px-5 animated slideInLeft">Read
+                                    More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>`;
     return html;
 }
