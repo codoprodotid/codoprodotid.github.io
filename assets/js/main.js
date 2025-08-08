@@ -54,40 +54,43 @@
                 items: 1,
                 dotsData: true,
             });
-        }, 1000);
+        }, 500);
     });
-
-    // Testimonials carousel
-    $(".testimonial-carousel").owlCarousel({
-        autoplay: true,
-        smartSpeed: 1000,
-        center: true,
-        dots: false,
-        loop: true,
-        nav: true,
-        navText: [
-            '<i class="bi bi-arrow-left"></i>',
-            '<i class="bi bi-arrow-right"></i>',
-        ],
-        responsive: {
-            0: {
-                items: 1,
+    setTimeout(() => {
+        // Testimonials carousel
+        $(".testimonial-carousel").owlCarousel({
+            autoplay: true,
+            smartSpeed: 1000,
+            center: true,
+            dots: false,
+            loop: true,
+            nav: true,
+            navText: [
+                '<i class="bi bi-arrow-left"></i>',
+                '<i class="bi bi-arrow-right"></i>',
+            ],
+            responsive: {
+                0: {
+                    items: 1,
+                },
+                768: {
+                    items: 2,
+                },
             },
-            768: {
-                items: 2,
-            },
-        },
-    });
+        });
+    }, 600);
 
     // Portfolio isotope and filter
-    var portfolioIsotope = $(".portfolio-container").isotope({
-        itemSelector: ".portfolio-item",
-        layoutMode: "fitRows",
-    });
-    $("#portfolio-flters li").on("click", function () {
-        $("#portfolio-flters li").removeClass("active");
-        $(this).addClass("active");
 
-        portfolioIsotope.isotope({ filter: $(this).data("filter") });
-    });
+    setTimeout(() => {
+        var portfolioIsotope = $(".portfolio-container").isotope({
+            itemSelector: ".portfolio-item",
+            layoutMode: "fitRows",
+        });
+        $("#portfolio-flters li").on("click", function () {
+            $("#portfolio-flters li").removeClass("active");
+            $(this).addClass("active");
+            portfolioIsotope.isotope({ filter: $(this).data("filter") });
+        });
+    }, 2000);
 })(jQuery);

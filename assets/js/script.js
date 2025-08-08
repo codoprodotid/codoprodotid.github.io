@@ -67,9 +67,46 @@ const testimonials = [
         profession: "TIM IT MTsN 6 Malang",
         image: "./assets/img/logo.png",
     },
+    {
+        name: "Client 2",
+        testimony:
+            "Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.",
+        profession: "TIM IT MTsN 6 Malang",
+        image: "./assets/img/logo.png",
+    },
 ];
 
-const portfolios = [{ name: "Landing Page" }];
+const portfolioTypes = [
+    { name: "web App Development", id: "web_app" },
+    { name: "Website Development", id: "website" },
+    { name: "Mobile Development", id: "mobile" },
+];
+const portfolios = [
+    {
+        name: "Landing Page",
+        description: "lorem ipsum dolor amet",
+        image: "./assets/img/logo.png",
+        link: "#",
+        year: "2024",
+        type: portfolioTypes[0].id,
+    },
+    {
+        name: "Landing Page Lagi",
+        description: "lorem ipsum dolor amet",
+        image: "./assets/img/img-600x400-6.jpg",
+        link: "#",
+        year: "2024",
+        type: portfolioTypes[1].id,
+    },
+    {
+        name: "Mobile Developmenrt",
+        description: "lorem ipsum dolor amet",
+        image: "./assets/img/logo.png",
+        link: "#",
+        year: "2024",
+        type: portfolioTypes[2].id,
+    },
+];
 
 const services = [
     {
@@ -102,7 +139,11 @@ $(document).ready(function () {
     setTeams();
     setTestimonials();
     setSevices();
-    $("#btn-order-now").attr("href", config.wa_me_with_template);
+    $(".btn-order-now").attr("href", config.wa_me_with_template);
+    // setPortfolioFilter();
+    setPortfolios();
+    setPortfolioGaleries();
+    $("#year-now").text(new Date().getFullYear());
 });
 
 function setTextElement(selector, text) {
@@ -215,4 +256,52 @@ function setHeroItem(item, index) {
                 </div>
             </div>`;
     return html;
+}
+
+function setPortfolios() {
+    let result = "";
+    portfolios.forEach((item, index) => {
+        result += setPortfolioItem(item, index);
+    });
+    $("#container-portfolios").html(result);
+}
+
+function setPortfolioGaleries() {
+    let html = "";
+    portfolios.forEach((item, index) => {
+        html += `<div class="col-4">
+            <img class="img-fluid rounded" src="${item.image}" alt="">
+        </div>`;
+    });
+    $("#portfolio-galeries").html(html);
+}
+
+function setPortfolioItem(item, index) {
+    let html = `<div class="col-lg-4 col-md-6 portfolio-item ${item.type}">
+        <div class="portfolio-img rounded overflow-hidden">
+            <img class="img-fluid" src="${item.image}" alt="">
+            <div class="portfolio-btn">
+                <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="${item.image}" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href=""><i class="fa fa-link"></i></a>
+            </div>
+        </div>
+        <div class="pt-3">
+            <p class="text-primary mb-0">${item.name}</p>
+            <hr class="text-primary w-25 my-2">
+            <h5 class="lh-base">${item.description}</h5>
+        </div>
+    </div>`;
+    return html;
+}
+
+function setPortfolioFilter() {
+    let html = `<li class="mx-2 active" data-filter="*">Semua</li>`;
+    portfolioTypes.forEach((item, index) => {
+        html += `<li class="mx-2" data-filter=".${item.id}">${item.name}</li>`;
+    });
+
+    // <li class="mx-2" data-filter=".second">Website Development</li>
+    // <li class="mx-2" data-filter=".third">Mobile Development</li>`;
+    html;
+    $("#portfolio-flters").html(html);
 }
