@@ -10,6 +10,8 @@ const config = {
     address: "Vila Bukit Tidar Blok A4 No 81 Merjosari Malang",
     email: "codopro.id@gmail.com",
     work_hour: "Senin - Jumat : 08.00 - 16.00 WIB",
+    youtube: "https://www.youtube.com/@codoprodotid",
+    instagram: "https://www.instagram.com/codopro.id/",
 };
 const heroes = [
     {
@@ -26,14 +28,14 @@ const heroes = [
     },
 ];
 const teams = [
-    // {
-    //     name: "Miftahul Ulum, S.Pd., Gr.",
-    //     position: "Full Stack Developer",
-    //     github: "https://miftahululum002.github.io",
-    //     instagram: "https://www.instagram.com/miftahululum002/",
-    //     linkedin: "https://www.linkedin.com/in/miftahululum002/",
-    //     image: "./assets/img/teams/miftahul-ulum.jpg",
-    // },
+    {
+        name: "Miftahul Ulum, S.Pd., Gr.",
+        position: "Full Stack Developer",
+        github: "https://miftahululum002.github.io",
+        instagram: "https://www.instagram.com/miftahululum002/",
+        linkedin: "https://www.linkedin.com/in/miftahululum002/",
+        image: "./assets/img/teams/miftahul-ulum.jpg",
+    },
     {
         name: "Team 1",
         position: "Full Stack Developer",
@@ -139,13 +141,19 @@ $(document).ready(function () {
     setTeams();
     setTestimonials();
     setSevices();
-    $(".btn-order-now").attr("href", config.wa_me_with_template);
+    setLinkElement(".btn-order-now", config.wa_me_with_template);
+    setLinkElement(".youtube", config.youtube);
+    setLinkElement(".instagram", config.instagram);
+
     // setPortfolioFilter();
     setPortfolios();
     setPortfolioGaleries();
     $("#year-now").text(new Date().getFullYear());
 });
 
+function setLinkElement(selector, link) {
+    $(selector).attr("href", link);
+}
 function setTextElement(selector, text) {
     $(selector).text(text);
 }
@@ -205,7 +213,6 @@ function setTetimonyItem(item, index = 0) {
 }
 
 // services
-
 function setSevices() {
     let result = "";
     services.forEach((item, index) => {
@@ -215,7 +222,8 @@ function setSevices() {
 }
 
 function setServiceItem(item, index) {
-    let html = `<div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+    const delay = "0." + (Number(index) + 1);
+    let html = `<div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="${delay}s">
         <div class="service-item rounded overflow-hidden">
             <img class="img-fluid" src="${item.image}" alt="">
             <div class="position-relative p-4 pt-0">
@@ -224,7 +232,7 @@ function setServiceItem(item, index) {
                 </div>
                 <h4 class="mb-3">${item.name}</h4>
                 <p>${item.description}</p>
-                <a class="small fw-medium d-none" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                <a class="small fw-medium btn-order-now" href="">Konsultasi Sekarang<i class="fa fa-arrow-right ms-2"></i></a>
             </div>
         </div>
     </div>`;
@@ -248,8 +256,7 @@ function setHeroItem(item, index) {
                     <div class="col-10 col-lg-8">
                         <h1 class="display-2 text-white animated slideInDown">${item.title}</h1>
                         <p class="fs-5 fw-medium text-white mb-4 pb-3">${item.subtitle}</p>
-                                <a href="" class="btn btn-primary d-none rounded-pill py-3 px-5 animated slideInLeft">Read
-                                    More</a>
+                                <a href="" class="btn btn-primary rounded-pill py-3 px-5 animated slideInLeft btn-order-now">Konsultasi Sekarang</a>
                             </div>
                         </div>
                     </div>

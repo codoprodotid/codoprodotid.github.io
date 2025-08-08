@@ -78,7 +78,7 @@
                 },
             },
         });
-    }, 600);
+    }, 700);
 
     // Portfolio isotope and filter
 
