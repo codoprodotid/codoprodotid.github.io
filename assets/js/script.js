@@ -312,3 +312,28 @@ function setPortfolioFilter() {
     html;
     $("#portfolio-flters").html(html);
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    const sections = document.querySelectorAll("section[id]");
+    const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+
+    function changeActiveLink() {
+        let scrollPos = window.scrollY + 200; // offset agar ganti lebih natural
+
+        sections.forEach((section) => {
+            if (
+                scrollPos >= section.offsetTop &&
+                scrollPos < section.offsetTop + section.offsetHeight
+            ) {
+                navLinks.forEach((link) => {
+                    link.classList.remove("active");
+                    if (link.getAttribute("href") === `#${section.id}`) {
+                        link.classList.add("active");
+                    }
+                });
+            }
+        });
+    }
+
+    window.addEventListener("scroll", changeActiveLink);
+});
