@@ -1,5 +1,7 @@
 const phone = "085117248442";
 const wa_me = "https://wa.me/+6285117248442";
+const email = "codopro.id@gmail.com";
+// subject=Konsultasi%20Aplikasi&body=Saya%20ingin%20konsultasi%20tentang%20aplikasi
 const config = {
     app_name: "Codo Pro ID",
     phone: phone,
@@ -8,7 +10,9 @@ const config = {
         wa_me +
         "?text=Halo%20Codo%20Pro%20ID%0Asaya%20ingin%20konsultasi%20tentang%20aplikasi%20",
     address: "Vila Bukit Tidar Blok A4 No 81 Merjosari Malang",
-    email: "codopro.id@gmail.com",
+    email: email,
+    email_me: `mailto:${email}`,
+    email_me_with_template: `mailto:${email}?subject=Konsultasi%20Aplikasi&body=Saya%20ingin%20konsultasi%20tentang%20aplikasi`,
     work_hour: "Senin - Jumat : 08.00 - 16.00 WIB",
     youtube: "https://www.youtube.com/@codoprodotid",
     instagram: "https://www.instagram.com/codopro.id/",
@@ -132,7 +136,6 @@ const services = [
 ];
 
 $(document).ready(function () {
-    console.log(config.wa_me_with_template);
     setTextElement(".app-name", config.app_name);
     setTextElement(".address", config.address);
     setTextElement(".email", config.email);
@@ -145,6 +148,8 @@ $(document).ready(function () {
     setLinkElement(".btn-order-now", config.wa_me_with_template);
     setLinkElement(".youtube", config.youtube);
     setLinkElement(".instagram", config.instagram);
+    setLinkElement(".email", config.email_me_with_template);
+    setLinkElement(".phone", config.wa_me_with_template);
 
     // setPortfolioFilter();
     setPortfolios();
