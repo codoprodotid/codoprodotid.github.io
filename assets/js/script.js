@@ -132,6 +132,7 @@ const services = [
 ];
 
 $(document).ready(function () {
+    console.log(config.wa_me_with_template);
     setTextElement(".app-name", config.app_name);
     setTextElement(".address", config.address);
     setTextElement(".email", config.email);
