@@ -1,5 +1,5 @@
 const phone = "085117248442";
-const wa_me = "https:/wa.me/+6285117248442";
+const wa_me = "https://wa.me/+6285117248442";
 const config = {
     app_name: "Codo Pro ID",
     phone: phone,
