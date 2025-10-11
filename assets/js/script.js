@@ -1,18 +1,20 @@
 const phone = "085117248442";
 const wa_me = "https://wa.me/+6285117248442";
 const email = "codopro.id@gmail.com";
-// subject=Konsultasi%20Aplikasi&body=Saya%20ingin%20konsultasi%20tentang%20aplikasi
+const app_name = "Codo Pro ID";
+const message_template = `Halo ${app_name}\nSaya ingin konsultasi tentang aplikasi `;
+const message_template_encoded = encodeURIComponent(message_template);
 const config = {
-    app_name: "Codo Pro ID",
+    app_name: app_name,
     phone: phone,
     wa_me: wa_me,
-    wa_me_with_template:
-        wa_me +
-        "?text=Halo%20Codo%20Pro%20ID%0Asaya%20ingin%20konsultasi%20tentang%20aplikasi%20",
+    wa_me_with_template: `${wa_me}?text=${message_template_encoded}`,
     address: "Vila Bukit Tidar Blok A4 No 81 Merjosari Malang",
     email: email,
     email_me: `mailto:${email}`,
-    email_me_with_template: `mailto:${email}?subject=Konsultasi%20Aplikasi&body=Saya%20ingin%20konsultasi%20tentang%20aplikasi`,
+    email_me_with_template: `mailto:${email}?subject=${encodeURIComponent(
+        "Konsultasi Aplikasi"
+    )}&body=${message_template_encoded}`,
     work_hour: "Senin - Jumat : 08.00 - 16.00 WIB",
     youtube: "https://www.youtube.com/@codoprodotid",
     instagram: "https://www.instagram.com/codopro.id/",
